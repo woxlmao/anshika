@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Anshika!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Pacifico', cursive;
+      background: radial-gradient(circle at top left, #ffe6f0, #ffe0ff);
+      overflow-x: hidden;
+      color: #ff4da6;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    h1 {
+      font-size: 2.8rem;
+      animation: pop 2s ease-in-out infinite alternate;
+    }
+    @keyframes pop {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); color: #ff3399; }
+    }
+    .collage {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1.2rem;
+      margin: 2rem 0;
+    }
+    .collage img {
+      width: 100%;
+      border-radius: 25px;
+      box-shadow: 0 0 18px #ff99cc;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .collage img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #ff4da6;
+    }
+    .magic-btn {
+      margin-top: 3rem;
+      padding: 1.2rem 2rem;
+      background: #ff80bf;
+      color: white;
+      border: none;
+      border-radius: 35px;
+      font-size: 1.3rem;
+      box-shadow: 0 5px 15px rgba(255,105,180,0.4);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .magic-btn:hover {
+      background: #ff4da6;
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px rgba(255,20,147,0.5);
+    }
+    .sparkle {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-radius: 50%;
+      animation: sparkle 1.5s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes sparkle {
+      from { opacity: 1; transform: translateY(0) scale(1); }
+      to { opacity: 0; transform: translateY(-120px) scale(0.5); }
+    }
+    .paragraph {
+      margin-top: 2rem;
+      padding: 1.2rem;
+      font-size: 1.2rem;
+      color: #d63384;
+      background: #fff0f6;
+      border-radius: 25px;
+      animation: fadeIn 2s ease-out;
+      box-shadow: 0 0 12px #ffaacc;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 1rem;
+      color: #cc3385;
+    }
+    @media (min-width: 768px) {
+      body {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Happy Birthday Anshika 🎂</h1>
+  <p style="margin-top: 1rem; font-size: 1.2rem;">Made with love by Saksham — 8 AUG 💖</p>
+
+  <div class="paragraph">
+    Anshika meri pyaari chhoti behna hai jise dekh kar hamesha ek smile aa jaati hai! 🩷<br>
+    Tu hamesha khush rahe, chamakti rahe, aur duniya ki saari khushiyan tujhe milein 🌸<br>
+    Yeh chhoti si website tujhe surprise dene ke liye hai... sirf tere liye ✨<br>
+    Tere jaise sweet log iss duniya mein rare hote hain... tu hamesha meri princess rahegi 👑💕<br>
+    Aur haan... Parahgarh ki taraf se bhi ek tight jhappi! 🤗
+  </div>
+
+  <div class="collage">
+    <img src="1.png" alt="photo 1">
+    <img src="2.png" alt="photo 2">
+    <img src="3.png" alt="photo 3">
+    <img src="4.png" alt="photo 4">
+  </div>
+
+  <button class="magic-btn" onclick="triggerMagic()">✨ Click for Magic ✨</button>
+
+  <footer>Forever your big bro 💝</footer>
+
+  <script>
+    function triggerMagic() {
+      for (let i = 0; i < 30; i++) {
+        let sparkle = document.createElement('div');
+        sparkle.classList.add('sparkle');
+        sparkle.style.left = Math.random() * window.innerWidth + 'px';
+        sparkle.style.top = Math.random() * window.innerHeight + 'px';
+        document.body.appendChild(sparkle);
+        setTimeout(() => sparkle.remove(), 1500);
+      }
+      alert("Happy Birthday Anshika! You're magical! 💫");
+    }
+  </script>
+</body>
+</html>
